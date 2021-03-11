@@ -1,3 +1,3 @@
 # Study
 
-## [k8s in action](.\Study\k8s_in_action)
+## [k8s in action](.\k8s_in_action)
