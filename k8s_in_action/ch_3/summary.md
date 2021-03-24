@@ -140,26 +140,28 @@
 
 ### 파드 생성
 - 커멘드
-```
-// 파드 생성 시 레이블 설정
-kubectl create -f kubia-manual-with-labels.yaml
+  ```
+  // 파드 생성 시 레이블 설정
+  kubectl create -f kubia-manual-with-labels.yaml
 
-// 실행 결과
-pod/kubia-manual-v2 created
-```
-kubectl get pods 명령은 레이블을 표시하지 않는 것이 기본값이라 --show-labels 스위치를 사용해 레이블을 볼 수 있다.
-```
-// 파드 목록 조회
-kubectl get po --show-labels
+  // 실행 결과
+  pod/kubia-manual-v2 created
+  ```
+  kubectl get pods 명령은 레이블을 표시하지 않는 것이 기본값이라 --show-labels 스위치를 사용해 레이블을 볼 수 있다.
 
-// 실행 결과
-NAME           READY   STATUS    RESTARTS   AGE     LABELS
-kubia-hrpbr     1/1    Running   0          7d16h   <none>
-kubia-htb95     1/1    Running   0          7d1h    <none>
-kubia-manual    1/1    Running   0          119s    <none>
-kubia-manual-v2 1/1    Running   0          119s    env=prod
-kubia-tctjg     1/1    Running   0          7d1h    run=kubia
-```
+  
+  ```
+  // 파드 목록 조회
+  kubectl get po --show-labels
+
+  // 실행 결과
+  NAME           READY   STATUS    RESTARTS   AGE     LABELS
+  kubia-hrpbr     1/1    Running   0          7d16h   <none>
+  kubia-htb95     1/1    Running   0          7d1h    <none>
+  kubia-manual    1/1    Running   0          119s    <none>
+  kubia-manual-v2 1/1    Running   0          119s    env=prod
+  kubia-tctjg     1/1    Running   0          7d1h    run=kubia
+  ```
 
 ## 4. 레이블 셀럭터를 이용한 파드 부분 집합 나열
 > 레이블 셀렉터는 특정 값과 레이블을 갖는지 여부에 따라 리소스를 필터링하는 기준이 된다.
